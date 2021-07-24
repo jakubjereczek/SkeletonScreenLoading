@@ -16,7 +16,8 @@
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    background-color: var(--dark);
+    background: rgb(34,34,34);
+    background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(214,65,97,1) 100%);
 }
 
 .header {
@@ -66,7 +67,6 @@ main {
 
 .card__title {
     width: 180px;
-    height: 100px;
     position: absolute;
     top: 10px;
     left: -5px;
@@ -96,9 +96,60 @@ main {
     right: 10px;
     width: 90px;
     height: 90px;
-    background-image: url('https://randomuser.me/api/portraits/med/men/36.jpg');
+    /* background-image: url('https://randomuser.me/api/portraits/med/men/36.jpg'); */
     background-size: contain;
     background-color: #cccccc;
     margin-top: 5px;
     box-shadow: 3px 3px 0px 0px rgba(255,255,255, 1); 
+}
+
+
+.card__number:empty {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    animation: opacityAnimation 2s infinite;
+
+}
+
+.card__title:empty {
+    width: 180px;
+    height: 30px;
+    background-color: #ddd;
+    animation: opacityAnimation 2s infinite;
+} 
+
+.card__content p span:empty {
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 18px;
+    background-color: #ddd;
+    animation: opacityAnimation 2s infinite;
+}
+
+.card__content_picture.loading {
+    background-color: #ddd;
+    animation: opacityAnimation 2s infinite;
+}
+
+@keyframes opacityAnimation {
+    0%   { 
+        opacity: 0.6;
+    }
+    50% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0.6; 
+    }
+}
+
+.error {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--neutral);
+    margin: 10px 0;
+    padding: 5px;
 }
