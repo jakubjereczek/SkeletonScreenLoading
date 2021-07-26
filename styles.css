@@ -8,7 +8,7 @@
     --secondary: #feb236;
     --neutral: #fefefe;
     --dark: #222222;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 
@@ -45,10 +45,11 @@ main {
 .card {
     display: flex;
     position: relative;
-    height: 240px;
+    min-height: 240px;
+    height: auto;
     width: 230px;
     padding: 5px;
-    background-color: rgba(0,0,0,0.10);
+    background-color: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255, 0.5);
     box-shadow: 10px 10px 30px 6px rgba(0,0,0,0.10);
     padding: 10px;
@@ -80,10 +81,16 @@ main {
 
 .card__content {
     margin-top: 35px;
+    padding-bottom: 80px;
 }
 
 .card__content p {
+    display: inline-block;
+    width: calc(100% - 40px);
     font-weight: 100;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .card__content p span {
@@ -94,8 +101,9 @@ main {
 .card__content_picture {
     position: absolute;
     right: 10px;
-    width: 90px;
-    height: 90px;
+    bottom: 10px;
+    width: 80px;
+    height: 80px;
     /* background-image: url('https://randomuser.me/api/portraits/med/men/36.jpg'); */
     background-size: contain;
     background-color: #cccccc;

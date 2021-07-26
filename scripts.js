@@ -79,9 +79,10 @@ const createCard = (user, index, type) => {
     const cardContentUserName = createElement("p", "username: ", "", [cardContentUserNameValue])
 
     const cardContentEmailValue = createElement("span", `${type === renderType.PRELOAD ? "" : `${user.email}`}`, "", null);
-    const cardContentEmail = createElement("p", "username: ", "", [cardContentEmailValue])
+    const cardContentEmail = createElement("p", "email: ", "", [cardContentEmailValue])
 
-    const cardContentFromValue = createElement("span", `${type === renderType.PRELOAD ? "" : `${user.location.country}, ${user.location.city}`}`, "", null);
+    // , ${user.location.city}
+    const cardContentFromValue = createElement("span", `${type === renderType.PRELOAD ? "" : `${user.location.country}`}`, "", null);
     const cardContentFrom = createElement("p", "from: ", "", [cardContentFromValue])
 
     const cardContentAgeValue = createElement("span", `${type === renderType.PRELOAD ? "" : `${user.dob.age}`}`, "", null);
